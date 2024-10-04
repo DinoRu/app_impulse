@@ -1,0 +1,36 @@
+.container {
+  width: 75%;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.fixed-section {
+  position: fixed;
+  top: 0;
+  left: 12.5%;
+  right: 12.5%;
+  z-index: 1000;
+  box-sizing: border-box;
+  padding: 20px 20px 0 20px;
+}
+/* 
+  .scrollable-content {
+    margin-top: 400px;
+    overflow-y: auto;
+  } */
+
+.table-scrollable {
+  margin-top: 520px;
+  width: 100%;
+}
+
+.table-wrapper {
+  position: relative;
+  padding: 0 20px;
+}
+
+@media (max-width: 450px) {
+  .table-scrollable {
+    margin-top: 620px;
+  }
+}
