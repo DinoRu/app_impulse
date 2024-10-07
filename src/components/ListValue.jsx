@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./listvalue.css";
+import config from "../config";
 
 const ListValue = () => {
   const [values, setValues] = useState([]);
   const [sum, setSum] = useState(0);
   const [latestValue, setLatestValue] = useState(0);
+  const baseUrl = config.apiUrlBase;
 
   const getValues = async () => {
-    const response = await fetch("http://localhost:3000/api/values");
+    const response = await fetch(`${baseUrl}/api/values`);
     const data = await response.json();
     data.sort((a, b) => new Date(b.date) - new Date(a.date));
     setValues(data);
