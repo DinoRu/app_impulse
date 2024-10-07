@@ -34,7 +34,7 @@ const ListValue = () => {
   // Function to delete all values
   const deleteAllValues = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/delete", {
+      const response = await fetch(`${baseUrl}/api/delete`, {
         method: "DELETE",
       });
       if (response.status === 200) {
